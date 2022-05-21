@@ -2,7 +2,7 @@
 
 namespace ETSFecha
 {
-    public class DiferenciasAnnos
+    public class YearDifference
     {
 
         /// <summary>

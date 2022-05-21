@@ -2,7 +2,7 @@ using ETSFecha;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace TestProject1
+namespace FechasTest
 {
     [TestClass]
     public class UnitTest1
@@ -117,7 +117,7 @@ namespace TestProject1
 
             string[] result = { "3800", "1" };
 
-            Assert.AreEqual(DiferenciasAnnos.DifferenceYear(dates)[0],result[0]);
+            Assert.AreEqual(YearDifference.DifferenceYear(dates)[0],result[0]);
         }
 
         /// <summary>
@@ -140,7 +140,7 @@ namespace TestProject1
 
             string[] result = { "3800", "1" };
 
-            Assert.AreEqual(DiferenciasAnnos.DifferenceYear(date)[1], result[1]);
+            Assert.AreEqual(YearDifference.DifferenceYear(date)[1], result[1]);
         }
     }
 }
