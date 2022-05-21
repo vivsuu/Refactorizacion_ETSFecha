@@ -34,6 +34,29 @@ namespace ETSFecha
             }
             return language;
         }
-
+        /// <summary>
+        /// Muestra mensajes genericos
+        /// </summary>
+        public static void ShowMessage(string[] language, string[] result)
+        {
+            Console.WriteLine(language[15] + result[0] + language[16] + result[1]);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Muestra mensajes genericos de salida
+        /// </summary>
+        public static void ShowMessage(string[] language)
+        {
+            Console.WriteLine(language[20]);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Muestra mensajes genericos de error
+        /// </summary>
+        public static void ShowMessage()
+        {
+            Console.WriteLine("Error");
+            Console.ReadKey();
+        }
     }
 }

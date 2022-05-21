@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ETSFecha
+﻿namespace ETSFecha
 {
     public class Program
     {
@@ -19,21 +17,20 @@ namespace ETSFecha
 
         static void Main(string[] args)
         {
-            string[] language = Menu.StartMenu();
-            if (language.Length>0)
+            string[] language = Menu.StartMenu();//Se inicia el menú
+            if (language.Length > 0)
             {
                 Date[] allDates = TomaDatos.UsoStruct(language);
                 Dates.CheckInformation(allDates, language);
                 string[] result = YearDifference.DifferenceYear(allDates);
-                Console.WriteLine(language[15] + result[0] + language[16] + result[1]);
-                Console.ReadKey();
+                MyFiles.ShowMessage(language, result);
+                MyFiles.ShowMessage(language);
             }
             else
             {
-                Console.WriteLine("Pulsa una tecla para finalizar...");
-                Console.ReadKey();
+                MyFiles.ShowMessage();
             }
-            
+
 
         }
     }

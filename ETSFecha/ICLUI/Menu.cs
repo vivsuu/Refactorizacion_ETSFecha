@@ -30,9 +30,7 @@ namespace ETSFecha
                     case '1': language = MyFiles.ReadFile(english); exit = true; break;
                     case '2': language = MyFiles.ReadFile(spanish); exit = true; break;
                     case '3': language = MyFiles.ReadFile(french); exit = true; break;
-                    case '4': language = MyFiles.ReadFile(portuguese); exit = true; break;
-                    case '5': exit = true; break;
-                        
+                    case '4': language = MyFiles.ReadFile(portuguese); exit = true; break;                       
                 }
             } while (!exit);
             return language;
@@ -54,7 +52,6 @@ namespace ETSFecha
             Console.WriteLine("- 2. Español / Spanish.                 -");
             Console.WriteLine("- 3. Francés / French.                  -");
             Console.WriteLine("- 4. Portugués / Portuguese.            -");
-            Console.WriteLine("- 5. Salir / Exit.                      -");
             Console.WriteLine("-----------------------------------------");
         }
     }
