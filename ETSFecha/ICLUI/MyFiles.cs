@@ -40,7 +40,9 @@ namespace ETSFecha
         public static void ShowMessage(string[] language, string[] result)
         {
             Console.WriteLine(language[15] + result[0] + language[16] + result[1]);
-            Console.ReadKey();
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine(language[14]);
+            _ = Console.ReadKey(true);
         }
         /// <summary>
         /// Muestra mensajes genericos de salida
