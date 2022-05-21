@@ -15,7 +15,7 @@ namespace ETSFecha
         private static int CounterYears(Program.Date[] allDates)
         {
             int counter = 0;
-            for (int position = 0; position < allDates.Length; position++)
+            for (int position = 0; position < allDates.Length; position+1)
             {
                 if (allDates[position].ACDC == 1)
                 {
