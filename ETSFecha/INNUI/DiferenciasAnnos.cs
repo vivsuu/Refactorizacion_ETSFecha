@@ -88,7 +88,6 @@ namespace ETSFecha
         private static int CalcDay(DateTime date, DateTime dateTwo)
         {
             int day = 0;
-
             DateTime provisionalDateOne = new DateTime(1, date.Month, date.Day);
             DateTime provisionalDateTwo = new DateTime(1, dateTwo.Month, dateTwo.Day);
 

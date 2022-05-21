@@ -39,7 +39,6 @@ namespace ETSFecha
             {
                 Console.WriteLine(language[0]);
                 string text = Console.ReadLine();
-
                 if (int.TryParse(text, out option))
                 {
                     if (option == 0)
@@ -81,7 +80,6 @@ namespace ETSFecha
             {
                 Console.Write(language[3]);
                 string Text = Console.ReadLine();
-
                 if (Int32.TryParse(Text, out anio))
                 {
                     if (anio < 10000)
@@ -122,9 +120,8 @@ namespace ETSFecha
             int month = 0;
             while (Continue)
             {
-                Console.WriteLine(language[6]);
+                Console.Write(language[6]);
                 string recogidaMes = Console.ReadLine();
-
                 if (Int32.TryParse(recogidaMes, out month))
                 {
                     if (month < 13)
@@ -164,7 +161,7 @@ namespace ETSFecha
             int day = 0;
             while (!leave)
             {
-                Console.WriteLine(language[9]);
+                Console.Write(language[9]);
                 string Text = Console.ReadLine();
                 if (Int32.TryParse(Text, out day))
                 {

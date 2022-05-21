@@ -10,6 +10,10 @@ namespace ETSFecha
         /// <param name="CheckDates"></param>
         public static void CheckInformation(Program.Date[] CheckDates, string[] language)
         {
+            Console.Clear();
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("-            "+language[19]+"               -");
+            Console.WriteLine("-----------------------------------------");
             for (int counter = 0; counter < CheckDates.Length; counter++)
             {
                 DateTime fecha = new DateTime(CheckDates[counter].Year, CheckDates[counter].Month, CheckDates[counter].Day);
@@ -18,7 +22,6 @@ namespace ETSFecha
                 {
                     int agno = YearCalc(fecha);
                     int day = DayCalc(fecha);
-                    Console.Clear();
                     Console.WriteLine(language[11] + agno + language[12] + day + language[13] + (counter + 1) + language[18]);
                     Console.WriteLine(language[14]);
                     Console.ReadKey();
@@ -27,7 +30,6 @@ namespace ETSFecha
                 {
                     int agno = YearCalcDC(fecha);
                     int day = DayCalc(fecha);
-                    Console.Clear();
                     Console.WriteLine(language[11] + agno + language[12] + day + language[13] + (counter + 1));
                     Console.WriteLine(language[14]);
                     Console.ReadKey();

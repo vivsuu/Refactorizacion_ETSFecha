@@ -25,7 +25,6 @@ namespace ETSFecha
                 Date[] allDates = TomaDatos.UsoStruct(language);
                 Dates.CheckInformation(allDates, language);
                 string[] result = DiferenciasAnnos.DifferenceYear(allDates);
-
                 Console.WriteLine(language[15] + result[0] + language[16] + result[1]);
                 Console.ReadKey();
             }
