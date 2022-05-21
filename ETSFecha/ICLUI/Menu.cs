@@ -14,8 +14,13 @@ namespace ETSFecha
         /// <returns>Retorna el idioma implementado en todo el programa</returns>
         public static string[] StartMenu()
         {
-            const string Spanish = "es.txt";
+            const string spanish = "es.txt";
             const string english = "en.txt";
+            const string chinese = "ch.txt";
+            const string french = "fr.txt";
+            const string portuguese = "pl.txt";
+            const string polish = "pt.txt";
+            const string russian = "ru.txt";
             string[] language = new string[0];
             ConsoleKeyInfo option;
             bool exit = false;
@@ -26,8 +31,13 @@ namespace ETSFecha
                 switch (option.KeyChar)
                 {
                     case '1': language = MyFiles.ReadFile(english); exit = true; break;
-                    case '2': language = MyFiles.ReadFile(Spanish); exit = true; break;
-                    case '3': exit = true; break;
+                    case '2': language = MyFiles.ReadFile(spanish); exit = true; break;
+                    case '3': language = MyFiles.ReadFile(chinese); exit = true; break;
+                    case '4': language = MyFiles.ReadFile(french); exit = true; break;
+                    case '5': language = MyFiles.ReadFile(portuguese); exit = true; break;
+                    case '6': language = MyFiles.ReadFile(polish); exit = true; break;
+                    case '7': language = MyFiles.ReadFile(russian); exit = true; break;
+                    case '8': exit = true; break;
                         
                 }
             } while (!exit);

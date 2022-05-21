@@ -38,14 +38,14 @@ namespace ETSFecha
             int days = 0;
             if (numACDC == 1)
             {
-                DateTime dateOne = new DateTime(1, alldata[0].Mes, alldata[0].Dia);
-                DateTime dateTwo = new DateTime(alldata[0].Anno + alldata[1].Anno + 1, alldata[1].Mes, alldata[1].Dia);
+                DateTime dateOne = new DateTime(1, alldata[0].Month, alldata[0].Day);
+                DateTime dateTwo = new DateTime(alldata[0].Year + alldata[1].Year + 1, alldata[1].Month, alldata[1].Day);
                 DiffYearsDays(ref days, ref year, dateTwo, dateOne);
             }
             else
             {
-                DateTime dateOne = new DateTime(alldata[0].Anno, alldata[0].Mes, alldata[0].Dia);
-                DateTime dateTwo = new DateTime(alldata[1].Anno, alldata[1].Mes, alldata[1].Dia);
+                DateTime dateOne = new DateTime(alldata[0].Year, alldata[0].Month, alldata[0].Day);
+                DateTime dateTwo = new DateTime(alldata[1].Year, alldata[1].Month, alldata[1].Day);
 
                 if (dateOne > dateTwo)
                 {

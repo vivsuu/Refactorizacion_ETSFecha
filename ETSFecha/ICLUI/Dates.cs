@@ -12,7 +12,7 @@ namespace ETSFecha
         {
             for (int counter = 0; counter < CheckDates.Length; counter++)
             {
-                DateTime fecha = new DateTime(CheckDates[counter].Anno, CheckDates[counter].Mes, CheckDates[counter].Dia);
+                DateTime fecha = new DateTime(CheckDates[counter].Year, CheckDates[counter].Month, CheckDates[counter].Day);
                 DateTime fechaHoy = DateTime.Today;
                 if (CheckDates[counter].ACDC == 1)
                 {

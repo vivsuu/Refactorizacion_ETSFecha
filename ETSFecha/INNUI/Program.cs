@@ -11,9 +11,9 @@ namespace ETSFecha
         /// </summary>
         public struct Date
         {
-            public int Anno;
-            public int Mes;
-            public int Dia;
+            public int Year;
+            public int Month;
+            public int Day;
             public int ACDC;
         }
 

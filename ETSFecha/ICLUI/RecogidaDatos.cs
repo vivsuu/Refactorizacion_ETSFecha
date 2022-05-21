@@ -18,9 +18,9 @@ namespace ETSFecha
                 bool leapYear = false;
                 Console.WriteLine(language[17] + (fillDates+1));
                 dates[fillDates].ACDC = BCInput(language);
-                dates[fillDates].Anno = InputYear(ref leapYear, language);
-                dates[fillDates].Mes = MonthInput(language);
-                dates[fillDates].Dia = DayInput(leapYear, dates[fillDates].Mes, language);
+                dates[fillDates].Year = InputYear(ref leapYear, language);
+                dates[fillDates].Month = MonthInput(language);
+                dates[fillDates].Day = DayInput(leapYear, dates[fillDates].Month, language);
             }
 
             return dates;
@@ -32,25 +32,25 @@ namespace ETSFecha
         /// <returns>1 si es antes de cristo o 0 si es después de cristo</returns>
         private static int BCInput(string[] language)
         {
-            bool Continue = true;
-            int Crist = -1;
+            bool leave = false;
+            int option = -1;
 
-            while (Continue)
+            while (!leave)
             {
                 Console.WriteLine(language[0]);
-                string Text = Console.ReadLine();
+                string text = Console.ReadLine();
 
-                if (int.TryParse(Text, out Crist))
+                if (int.TryParse(text, out option))
                 {
-                    if (Crist == 0)
+                    if (option == 0)
                     {
-                        Continue = false;
+                        leave = true;
                     }
                     else
                     {
-                        if (Crist == 1)
+                        if (option == 1)
                         {
-                            Continue = false;
+                            leave = true;
                         }
                         else
                         {
@@ -64,7 +64,7 @@ namespace ETSFecha
                 }
 
             }
-            return Crist;
+            return option;
         }
 
         /// <summary>
@@ -74,25 +74,25 @@ namespace ETSFecha
         /// <returns>Retorna el año</returns>
         private static int InputYear(ref bool LeapYear, string[] language)
         {
-            bool Continue = true;
-            int Agno = 0;
+            bool leave = false;
+            int anio = 0;
 
-            while (Continue)
+            while (!leave)
             {
                 Console.Write(language[3]);
                 string Text = Console.ReadLine();
 
-                if (Int32.TryParse(Text, out Agno))
+                if (Int32.TryParse(Text, out anio))
                 {
-                    if (Agno < 10000)
+                    if (anio < 10000)
                     {
-                        if (Agno >= 1)
+                        if (anio >= 1)
                         {
-                            if (Agno % 4 == 0 && Agno % 100 != 0 || Agno % 400 == 0)
+                            if (anio % 4 == 0 && anio % 100 != 0 || anio % 400 == 0)
                             {
                                 LeapYear = true;
                             }
-                            Continue = false;
+                            leave = true;
                         }
                         else
                         {
@@ -109,7 +109,7 @@ namespace ETSFecha
                     Console.WriteLine(language[2]);
                 }
             }
-            return (Agno);
+            return (anio);
         }
 
         /// <summary>

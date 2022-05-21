@@ -16,12 +16,12 @@ namespace TestProject1
         {
             Program.Date dates = new Program.Date();
 
-            dates.Anno = 1900;
-            dates.Mes = 2;
-            dates.Dia = 10;
+            dates.Year = 1900;
+            dates.Month = 2;
+            dates.Day = 10;
             dates.ACDC = 0;
 
-            DateTime date = new DateTime(dates.Anno, dates.Mes, dates.Dia);
+            DateTime date = new DateTime(dates.Year, dates.Month, dates.Day);
 
             Assert.AreEqual(Dates.YearCalc(date), 3922);
 
@@ -35,12 +35,12 @@ namespace TestProject1
         {
             Program.Date dates = new Program.Date();
 
-            dates.Anno = 2022;
-            dates.Mes = 2;
-            dates.Dia = 1;
+            dates.Year = 2022;
+            dates.Month = 2;
+            dates.Day = 1;
             dates.ACDC = 1;
 
-            DateTime date = new DateTime(dates.Anno, dates.Mes, dates.Dia);
+            DateTime date = new DateTime(dates.Year, dates.Month, dates.Day);
 
             Assert.AreEqual(Dates.YearCalcDC(date), 0);
         }
@@ -53,12 +53,12 @@ namespace TestProject1
         {
             Program.Date dates = new Program.Date();
 
-            dates.Anno = 2022;
-            dates.Mes = 2;
-            dates.Dia = 1;
+            dates.Year = 2022;
+            dates.Month = 2;
+            dates.Day = 1;
             dates.ACDC = 1;
 
-            DateTime date = new DateTime(dates.Anno, dates.Mes, dates.Dia);
+            DateTime date = new DateTime(dates.Year, dates.Month, dates.Day);
 
             Assert.AreNotEqual(Dates.YearCalc(date), 1000);
         }
@@ -70,12 +70,12 @@ namespace TestProject1
         {
             Program.Date dates = new Program.Date();
 
-            dates.Anno = 2022;
-            dates.Mes = 2;
-            dates.Dia = 1;
+            dates.Year = 2022;
+            dates.Month = 2;
+            dates.Day = 1;
             dates.ACDC = 1;
 
-            DateTime date = new DateTime(dates.Anno, dates.Mes, dates.Dia);
+            DateTime date = new DateTime(dates.Year, dates.Month, dates.Day);
 
             Assert.AreEqual(Dates.DayCalc(date), 20);
         }
@@ -87,12 +87,12 @@ namespace TestProject1
         {
             Program.Date dates = new Program.Date();
 
-            dates.Anno = 1900;
-            dates.Mes = 2;
-            dates.Dia = 10;
+            dates.Year = 1900;
+            dates.Month = 2;
+            dates.Day = 10;
             dates.ACDC = 0;
 
-            DateTime date = new DateTime(dates.Anno, dates.Mes, dates.Dia);
+            DateTime date = new DateTime(dates.Year, dates.Month, dates.Day);
 
             Assert.AreEqual(Dates.DayCalc(date), 11);
         }
@@ -105,14 +105,14 @@ namespace TestProject1
         {
             Program.Date[] dates = new Program.Date[2];
 
-            dates[0].Anno = 1900;
-            dates[0].Mes = 2;
-            dates[0].Dia = 10;
+            dates[0].Year = 1900;
+            dates[0].Month = 2;
+            dates[0].Day = 10;
             dates[0].ACDC = 0;
 
-            dates[1].Anno = 1900;
-            dates[1].Mes = 2;
-            dates[1].Dia = 11;
+            dates[1].Year = 1900;
+            dates[1].Month = 2;
+            dates[1].Day = 11;
             dates[1].ACDC = 1;
 
             string[] result = { "3800", "1" };
@@ -128,14 +128,14 @@ namespace TestProject1
         {
             Program.Date[] date = new Program.Date[2];
 
-            date[0].Anno = 1900;
-            date[0].Mes = 2;
-            date[0].Dia = 10;
+            date[0].Year = 1900;
+            date[0].Month = 2;
+            date[0].Day = 10;
             date[0].ACDC = 0;
 
-            date[1].Anno = 1900;
-            date[1].Mes = 2;
-            date[1].Dia = 11;
+            date[1].Year = 1900;
+            date[1].Month = 2;
+            date[1].Day = 11;
             date[1].ACDC = 1;
 
             string[] result = { "3800", "1" };
